@@ -1,16 +1,12 @@
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 using namespace std;
 
  int main(){
+     int data[102]={0,0,0,0,0,0,0,5,18,0,0,0,0,0,0,0,0,0,54,43,23,0,0,0,0,0,0,0,0,0};
+     
 
-    int data[102]={},num=0;
-    cin>>num;
-    while(num--){
-        int tmp=0;
-        cin>>tmp;
-        data[tmp]++;
-    }
 
     ofstream outfile;
     //outfile.open("/home/crystal/桌面/coding/makefile anyway/data.txt",  ios::out);

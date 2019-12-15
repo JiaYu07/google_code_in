@@ -1,16 +1,17 @@
 GCC=g++
-Objects=grade.o line_chart.py
+Objects1=grade.o
+Objects2= line_chart.py
 
-.PHONY: clean
+.PHONY: clean main grade.o
 
-main: $(Objects)
-	$(GCC) -c $< -o $@
-	python3 line_chart.py
+test: $(Objects1) $(Objects2)
+	$(GCC)  $< -o $@  
+	./test
+	python3 $(Objects2)
 
 grade.o: grade.cpp
 	$(GCC) -c $< -o $@
 
 clean: 
-	@echo "clean..."
-	-rm *.o
+	rm -f *.o test
 

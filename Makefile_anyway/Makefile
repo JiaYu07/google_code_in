@@ -2,7 +2,7 @@ GCC=g++
 Objects1=grade.o
 Objects2= line_chart.py
 
-.PHONY: clean main grade.o
+.PHONY: clean test 
 
 test: $(Objects1) $(Objects2)
 	$(GCC)  $< -o $@  

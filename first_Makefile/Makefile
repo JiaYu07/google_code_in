@@ -2,12 +2,13 @@ CC=g++
 EXE=print_gci_name.o
 object=print_gci_name.cpp
 
-main: $(EXE)
-	$(CC)  $< -o $@
+main: $(EXE)S
+	@$(CC)  $< -o $@
+	@./main
 EXE: $(object)
 	$(CC)  $< -o $@
 	
 .PHONY: clean main EXE
 clean:
-	@echo "clean....."
-	-rm *.o
+	@Secho "clean....."
+	-rm *.o main

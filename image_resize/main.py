@@ -42,7 +42,7 @@ def saving(q=100):
     global infile, file, im
 
     if re.match(".png$",infile):
-        im.save(file+"1.png" , "png",quality=q)
+        im.save(file+".png" , "png",quality=q)
     if re.match(".jpg$",infile):
         im.save(file+".jpg" , "jpg",quality=q)
     if re.match(".jpeg$",infile):
